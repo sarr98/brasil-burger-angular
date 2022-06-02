@@ -1,0 +1,39 @@
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Nouveau produit</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a [routerLink]="['/dashboard']">Home</a></li>
+          <li class="breadcrumb-item active">Produit</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <form [formGroup]="productForm" (ngSubmit)="handleSaveProduct()">
+        <div class="input-group has-validation">
+          <div class="w-100">
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Nom du produit" formControlName="libelle"/>
+              <mat-error *ngIf="libelle?.errors?.['required']">Le libelle est recquis</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="w-100">
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Prix" formControlName="prix"/>
+              <mat-error *ngIf="prix?.errors?.['required']">Le prix est recquis</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="w-100">
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Ingrédients " formControlName="composants"/>
+              <mat-error *ngIf="composants?.errors?.['required']">Les composants sont recquis</mat-error>
+            </mat-form-field>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit col-lg-12" style="margin: 20px 10px;">Ajouter Produit</button>
+        </div>
+      </form>
+    </section>
+
+  </main>

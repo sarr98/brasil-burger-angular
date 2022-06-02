@@ -1,0 +1,64 @@
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " [routerLink]="['/dashboard']">
+          <i class="bi bi-calculator"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a [routerLink]="['/dashboard/commands']" class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-cart3"></i><span>Commandes</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+
+      </li><!-- End Tables Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-list-check"></i><span>Menus</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a [routerLink]="['/dashboard/add-menu']">
+              <i class="bi bi-circle"></i><span>Add menu</span>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/dashboard/menus']">
+              <i class="bi bi-circle"></i><span>List menus</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-capslock-fill"></i><span>Produits</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a [routerLink]="['/dashboard/add-product']">
+              <i class="bi bi-list"></i><span>Add produit</span>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/dashboard/products']">
+              <i class="bi bi-circle"></i><span>List produits</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" (click)="handleLogout()">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>LogOut</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+    </ul>
+
+  </aside>

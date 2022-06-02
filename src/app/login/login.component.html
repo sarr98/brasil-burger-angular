@@ -1,0 +1,44 @@
+<main style="background-color: #ffffff" class="vh-100">
+    <div class="container">
+      <section class="section register min-vh-90 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+              <div class="d-flex justify-content-center py-4">
+                <a href="" class="logo d-flex align-items-center w-auto">
+                </a>
+              </div>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="pt-4 pb-2">
+                    <p class="text-center small">Page de Connexion</p>
+                  </div>
+                  <form class="row g-3 needs-validation" [formGroup]="loginForm" (ngSubmit)="submit()">
+                    <div class="col-12">
+                      <div class="input-group has-validation">
+                        <mat-form-field class="w-100">
+                          <input matInput placeholder="Login" formControlName="email"/>
+                          <mat-error *ngIf="email?.errors?.['required']">Veuillez entrer votre login</mat-error>
+                          <mat-error *ngIf="email?.errors?.['email']">login ou password incorrect</mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <mat-form-field class="w-100">
+                        <input matInput placeholder="Password" formControlName="password" type="password"/>
+                        <mat-error *ngIf="password?.errors?.['required']">Login ou password incorrect </mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div class="col text-center">
+                      <button mat-button type="submit" class="btn btn-primary col-lg-12 ">Conexion </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
